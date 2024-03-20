@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-image: url('blue-bg.jpg');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* To display content as block*/
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* Adjusted to align */
+  gap: 3em;
+  align-items: center;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  padding: 15px;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  margin-left: 3em;
+}
+
+#main-nav {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+#main-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 3em; /* space between content*/
+}
+
+
+#main-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+
+.cta-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 0 2em; /* adjust for side space*/
+
+}
+
+#nav-toggle {
+  display: none;/*dont show for big screen*/
+  color: white;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px; /* Added margin for spacing */
+}
+/* .uni-section{
+  display: block;
+  height: 1000vh;
+} */
+.opacity{
+  background-color: rgba(0, 0, 255, 0.5);
+  opacity: 100;
+  margin: auto;
+  z-index: 1;
+}
+.content {
+  padding: 20vh 8%;
+  text-align: center;
+  color: white;
+}
+
+/* TODO:adjust this div for mobile responsiveness 
+TODO:positoning in css */
+
+.content h1 {
+  font-size:70px;
+  font-family:  sans-serif;
+}
+
+.content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  margin: 0 10%;
+}
+
+.download-button, .discord-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.discord-button {
+  background-color: black;
+  color: white;
+}
+
+.download-button:hover,.cta-button:hover{
+  color: rgb(80, 80, 214);
+}
+
+.discord-button:hover{
+  background-color: rgb(27, 26, 26);
+}
+
+
+
+/******************************* THE SECTION PART COMMENDS HERE *****************************/
+
+.uni-section { /* this is a universal class that spans for all my sections*/
+ 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  /* margin: auto; */
+}
+.contents {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center; 
+} 
+
+.item {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+}
+.item img {
+  max-width: 100%;
+  height: auto;
+  flex: 1;
+  display: block;
+}
+/* for a diferent colour */
+.bg-color{
+  background-color: #dddada;
+}
+
+.unique{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7em 0;
+}
+
+.unique-img {
+  width: 100%;
+}
+img {
+  width: 100%;
+}
+
+/****************** MEDIA QUERY SECTION FOR WEBSITE RESPONSIVENESS *************/
+@media screen and (max-width: 1010px) {
+  .container{
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1010px) {
+  
+  #main-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0; /* Adjusted to position menu to the left */
+    background-color: #000;
+    color: #Fff;
+    padding: 10px;
+    width: 200px;
+  }
+
+  #main-nav ul {
+    flex-direction: column;
+  }
+
+  #main-nav ul li {
+    color: black;
+    flex-direction: column;
+  }
+
+  .cta-button{
+    margin-left: auto;/*Pushes logo to the left*/
+  }
+
+  #nav-toggle {
+    display: block;
+  
+  }
+
+  /* this is for my first section */
+  .contents {
+    flex-direction: column;
+    margin-bottom: 2em;
+    
+  }
+  .item {
+    width: 100%;
+  }
+  .uni-section{
+    /* top: 2em; */
+    margin: 2em 0;
+  }
+}
+
